@@ -139,16 +139,16 @@ table {
 @font-face {
   font-style: normal;
   font-weight: normal;
-  font-family: "Panton-Bold";
+  font-family: "Panton-Italic";
 
-  src: url(".assets/fonts/Panton/Panton-Bold.otf")  format("opentype");
+  src: url("./assets/fonts/Panton/Panton-Italic.otf")  format("opentype");
 }
 @font-face {
   font-style: normal;
   font-weight: normal;
-  font-family: "Exo-Medium.otf";
+  font-family: "Exo-Medium-Italic";
 
-  src: url("./assets/fonts/Exo/Exo-Medium.otf")  format("truetype");
+  src: url("./assets/fonts/Exo/Exo-MediumItalic.otf")  format("truetype");
 }
 
 /*background*/
@@ -166,16 +166,16 @@ body {
 
 
 
-@media screen and (min-width: 37.5rem) {
+@media screen and (min-width: 38rem) {
   body {
     background-image: url("./assets/background.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-attachment: fixed;
   }
   .wrapper {
-    background-color: #f2eee9;
-    opacity: 0.75;
+    background-color: #f2eee9CC;
+
   }
 }
 
@@ -183,16 +183,18 @@ body {
   body {
     background-image: url("./assets/background.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-attachment: fixed;
-  }
+      }
   .wrapper {
     max-width: 1024px;
 
-    background-color: #f2eee9;
-    opacity: 0.75;
+    background-color: #f2eee9CC;
+
   }
 }
+
+
 
 /* header */
 .header {
@@ -212,6 +214,7 @@ body {
   min-width: 100%;
 
   background-color: #010005;
+
 }
 
 .header .nav-list {
@@ -225,18 +228,21 @@ body {
   align-items: center;
 }
 .header .author-userpic {
-  display: none;
+  border-radius: 100px;
+  margin: 0 2vw;
+
+
 }
 .header .author-name {
-  -ms-flex-item-align: center;
-  align-self: center;
-  margin: 0 auto 2vh;
+  position: relative;
+  margin: 0 2vw 3vh;
+
 }
 .nav-list a {
   padding: 0 2vw 4vh 0;
 
   font-size: 1em;
-  font-family: "Exo", "Arial", sans-serif;
+  font-family: "Exo-Medium-Italic", "Arial", sans-serif;
   color: #ffffff;
   text-decoration: none;
 }
@@ -251,3 +257,125 @@ h1 {
   transition: 1s;
   color: #b42024;
 }
+
+/* main */
+.main-wrapper{
+  max-width: 100%;
+}
+.about, .education, .skills, .experience, .contacts{
+  margin: 3vh 4vw;
+
+}
+.background-image{
+  display: none;
+}
+.title{
+  font-family: "Panton-Italic", "Arial", sans-serif;
+  font-size: 2em;
+  color: #b42024;
+  border-bottom: 1px;
+  border-style: ridge;
+  border-color: #010005;
+}
+
+.desc{
+  font-family: "Exo-Medium-Italic", "Arial", sans-serif;
+  margin-top: 2vh;
+}
+
+/*contacts*/
+.contacts .desc{
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  }
+
+  .contact a{
+    font-family: "Exo-Medium-Italic", "Arial", sans-serif;
+    text-decoration: none;
+    font-weight: normal;
+    color: #000;
+  }
+
+
+/* form */
+.get-in-touch{
+  width: 100%;
+  background-color: #010005CC;
+}
+.get-in-touch-form{
+  display: inline-block;
+  position: relative;
+  padding-left: 1vw;
+}
+
+legend{
+  font-family: "Exo-Medium-Italic", "Arial", sans-serif;
+  font-size: 2em;
+  color: #bebebe;
+}
+.get-in-touch-desc{
+  font-family: "Exo-Medium-Italic", "Arial", sans-serif;
+  font-size: 1em;
+  color: #bebebe;
+  margin-bottom: 2vh;
+}
+ input{
+   height: 4vh;
+   width: 75%;
+   background-color: #454545;
+   color: #bebebe;
+   font-family: "Panton-Italic", "Arial", sans-serif;
+   font-size: 1em;
+   margin-bottom: 2vh;
+ }
+
+ input[placeholder]{
+   padding-left: 3vw;
+ }
+
+ textarea{
+   width: 75%;
+   height: 14vh;
+   background-color: #454545;
+   color: #bebebe;
+   font-family: "Panton-Italic", "Arial", sans-serif;
+   font-size: 1em;
+   margin-bottom: 2vh;
+ }
+
+ textarea[placeholder]{
+   padding-left: 3vw;
+   padding-top: 1vh;
+ }
+
+ .button{
+   font-family: "Panton-Italic", "Arial", sans-serif;
+   font-weight: bold;
+   font-size: 1em;
+   text-transform: uppercase;
+   color: #bebebe;
+   width: 5vw;
+   height: 4vh;
+   background-color: #b42024;
+   position: relative;
+   left: 72%;
+   min-width: 10%;
+ }
+
+ /*footer*/
+ .footer{
+   background-color: #010005;
+   color: #fffc;
+   font-family: "Panton-Italic", "Arial", sans-serif;
+   padding: 2vh 0 2vh 4vh;
+   font-size: 0.7em;
+
+ }
