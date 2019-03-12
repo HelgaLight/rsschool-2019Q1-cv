@@ -1,0 +1,394 @@
+/*style reset*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+
+  border: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Fonts */
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Ralington";
+
+  src: url("./assets/fonts/Ralington/Ralington.otf")  format("opentype");
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Panton-Italic";
+
+  src: url("./assets/fonts/Panton/Panton-Italic.otf")  format("opentype");
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Exo-Medium-Italic";
+
+  src: url("./assets/fonts/Exo/Exo-MediumItalic.otf")  format("truetype");
+}
+
+/*background*/
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  background-color: #f2eee9;
+}
+
+
+
+
+@media screen and (min-width: 38rem) {
+  body {
+    background-image: url("./assets/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .wrapper {
+    background-color: #f2eee9cc;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-image: url("./assets/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .wrapper {
+    max-width: 1024px;
+
+    background-color: #f2eee9cc;
+  }
+}
+
+
+
+/* header */
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 100%;
+
+  background-color: #010005;
+}
+
+.header .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.header .author-userpic {
+  margin: 0 2vw;
+
+  border-radius: 100px;
+}
+.header .author-name {
+  position: relative;
+
+  margin: 0 2vw 3vh;
+}
+.nav-list a {
+  padding: 0 2vw 4vh 0;
+
+  font-size: 1em;
+  font-family: "Exo-Medium-Italic", "Arial", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+}
+h1 {
+  font-size: 3em;
+  font-family: "Ralington", "Arial", sans-serif;
+  color: #ffffff;
+}
+
+.nav-list a:hover {
+  color: #b42024;
+
+  -webkit-transition: 1s;
+          transition: 1s;
+}
+
+/* main */
+.main-wrapper {
+  max-width: 100%;
+}
+.about,
+.education,
+.skills,
+.experience,
+.contacts {
+  margin: 3vh 4vw;
+}
+.background-image {
+  display: none;
+}
+.title {
+  font-size: 2em;
+  font-family: "Panton-Italic", "Arial", sans-serif;
+  color: #b42024;
+
+  border-style: ridge;
+  border-color: #010005;
+  border-bottom: 1px;
+}
+
+.desc {
+  margin-top: 2vh;
+
+  font-family: "Exo-Medium-Italic", "Arial", sans-serif;
+}
+
+/*contacts*/
+.contacts .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  font-weight: bold;
+}
+
+.contact a {
+  font-weight: normal;
+  font-family: "Exo-Medium-Italic", "Arial", sans-serif;
+  color: #000000;
+  text-decoration: none;
+}
+
+
+/* form */
+.get-in-touch {
+  width: 100%;
+
+  background-color: #010005cc;
+}
+.get-in-touch-form {
+  position: relative;
+
+  display: inline-block;
+  padding-left: 1vw;
+}
+
+legend {
+  font-size: 2em;
+  font-family: "Exo-Medium-Italic", "Arial", sans-serif;
+  color: #bebebe;
+}
+.get-in-touch-desc {
+  margin-bottom: 2vh;
+
+  font-size: 1em;
+  font-family: "Exo-Medium-Italic", "Arial", sans-serif;
+  color: #bebebe;
+}
+input {
+  width: 75%;
+  height: 4vh;
+  margin-bottom: 2vh;
+
+  font-size: 1em;
+  font-family: "Panton-Italic", "Arial", sans-serif;
+  color: #bebebe;
+
+  background-color: #454545;
+}
+
+input[placeholder] {
+  padding-left: 3vw;
+}
+
+textarea {
+  width: 75%;
+  height: 14vh;
+  margin-bottom: 2vh;
+
+  font-size: 1em;
+  font-family: "Panton-Italic", "Arial", sans-serif;
+  color: #bebebe;
+
+  background-color: #454545;
+}
+
+textarea[placeholder] {
+  padding-top: 1vh;
+  padding-left: 3vw;
+}
+
+.button {
+  position: relative;
+  left: 72%;
+
+  width: 5vw;
+  min-width: 10%;
+  height: 4vh;
+
+  font-weight: bold;
+  font-size: 1em;
+  font-family: "Panton-Italic", "Arial", sans-serif;
+  color: #bebebe;
+  text-transform: uppercase;
+
+  background-color: #b42024;
+}
+
+/*footer*/
+.footer {
+  padding: 2vh 0 2vh 4vh;
+
+  font-size: 0.7em;
+  font-family: "Panton-Italic", "Arial", sans-serif;
+  color: #fffc;
+
+  background-color: #010005;
+}
